@@ -1,0 +1,93 @@
+.option {
+    display: block;
+    margin-bottom: 0.25em;
+}
+
+.check {
+    padding-left: 1.2em;
+
+    &__input {
+        /*Remove spaces with Position Absolute*/
+        position: absolute;
+        /*hiding the checkbox itself*/
+
+        /*appearance: none;*/
+
+        /*Hiding via shortened .visually-hidden - BEST PRACTICE FOR SCREEN-READERS!!!*/
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+
+    /*Give some style to our custom checkbox*/
+    &__box {
+        position: absolute;
+
+        /*margin-left: -1.2em;
+    width: 1em;
+    height: 1em;*/
+        /*background-image: url("../img/off.svg");*/
+
+        /*Inline CSS code (made via URL Encoder for SVG*/
+        /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect x='3' y='3' width='14' height='14' fill='%23fff' stroke='%234a90e2' stroke-width='2' rx='2'/%3E%3C/svg%3E");*/
+
+        /*Checkbox using styles*/
+        width: 0.6em;
+        height: 0.6em;
+        box-shadow: 0 0 0 0.1em #4a90e2;
+        margin-left: -1em;
+        margin-top: 0.2em;
+        border-radius: 0.05em;
+        background-color: #fff;
+
+        /*There is one more way to make custom checkboxes, via adding checkbox inline to html, using svg, then, we change fill and stroke only in CSS for different conditions!!!!
+        Or! We may do checkbox with the help of :before instead of adding a span to a label*/
+    }
+
+        /*The same way we can make radio buttons (with the help of before :before). Do not forget to add border-radius 50% and change the name of classes
+        and input type in html*/
+
+    /*Checkbox checked*/
+    &__input:checked+&__box {
+        /*background-image: url("../img/on.svg");*/
+
+        /*Checkbox using styles*/
+        background-color: #4a90e2;
+        background-image: url("../img/check.svg");
+    }
+
+    /*focused*/
+    &__input:focus+&__box {
+        /*background-image: url("../img/off-focused.svg");*/
+
+        /*Checkbox using styles*/
+        box-shadow:
+            0 0 0 0.1em #4a90e2,
+            0 0 0 0.2em #7ed321;
+    }
+
+    /*checked + focused*/
+    &__input:checked:focus+&__box {
+        /*background-image: url("../img/on-focused.svg");*/
+
+        /*Checkbox using styles - nothing to add*/
+
+    }
+
+    /*disabled*/
+    &__input:disabled+&__box {
+        /*background-image: url("../img/off-disabled.svg");*/
+
+        /*Checkbox using styles*/
+        box-shadow: 0 0 0 0.1em #9b9b9b;
+    }
+
+    /*checked + disabled*/
+    &__input:checked:disabled+&__box {
+        /*background-image: url("../img/on-disabled.svg");*/
+
+        /*Checkbox using styles*/
+        background-color: #9b9b9b;
+    }
+}

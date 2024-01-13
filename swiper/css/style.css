@@ -1,0 +1,59 @@
+@charset "UTF-8";
+.image {
+  padding: 30px;
+  min-height: 100%;
+}
+.image__title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 30px;
+}
+.image__slider {
+  padding: 30px 0 70px 0;
+  /*Стрелки выполнены в виде иконочного шрифта. Мы обращаемся к ним, и можем менять
+  размер, цвет, вообщем, по другому их стилизовать. По умолчанию - они синего цвета*/
+  /*Буллеты также можно стилизовать. Чтобы посмотреть класс дива внутри пагинации - 
+  открыть инструменты разработчика, и посмотреть*/
+}
+.image__slider-image {
+  max-width: 60%;
+  text-align: center;
+  margin-left: 30px;
+}
+.image__slider .swiper-button-prev:after,
+.image__slider .swiper-button-next::after {
+  color: black;
+  font-size: 60px;
+}
+.image__slider .swiper-pagination {
+  bottom: 0;
+  /*Стилизация буллетов*/
+  /*Стилизация типа Фракция*/
+  /*Стилизация прогрессбар*/
+}
+.image__slider .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  background-color: aqua;
+  /*Ховер и актив стейт также можно делать буллетам*/
+}
+.image__slider .swiper-pagination-bullet:hover {
+  background-color: bisque;
+}
+.image__slider .swiper-pagination-bullet:active {
+  background-color: coral;
+}
+.image__slider .swiper-pagination-fraction {
+  font-size: 20px;
+  color: brown;
+}
+.image__slider .swiper-pagination-progressbar-fill {
+  background-color: green;
+}
+.image__slider .swiper-scrollbar-drag {
+  cursor: pointer;
+  background-color: green;
+}/*# sourceMappingURL=style.css.map */

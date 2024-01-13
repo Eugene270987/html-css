@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Теги Форм</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Form - тег оболочка, который содержит все остальные теги форм внутри себя. Может применяться дисплей флекс, стили шрифта, и т.д. -->
+      <!-- method - get/post - брать/отправлять. action - адрес/файл, куда попадают данные формы при отправке! -->
+      <form action="#" method="post">
+        <!-- fieldset - набор полей ввода - тег группирует несколько инпутов в одну оболочку, имеет бордер -->
+        <fieldset>
+          <!-- Ледженд - придает филдсету название - своего рода Title for Fiedlset -->
+          <legend></legend>
+          <!-- Поле ввода/выбора данных(в зависимости от значения типа). Также может иметь несколько главенствующих атрибутов -->
+          <label>
+            <input type="text" />
+            Login
+          </label>
+          <!-- Лейбл - не может содержать более 1 элемента внутри себя. То есть, в 1 лейбл - 1 инпут/селект, т.д.!!! -->
+          <label>
+            Password
+            <input type="password" />
+          </label>
+        </fieldset>
+        <!-- Button - тег, типы которого Сабмит и Резет(отправить данные формы/сбросить данные формы) -->
+        <button class="button" type="submit">Submit</button>
+        <button class="button" type="reset">Reset</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+.ol__menu {
+  counter-reset: ol-numbers;
+
+  &-item {
+    /*list-style: none is stated in myNormalize*/
+    position: relative;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
+    &:before{
+      counter-increment: ol-numbers;
+      content: counter(ol-numbers) ")";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      color: green;
+    }
+  }
+}

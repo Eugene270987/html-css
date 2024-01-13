@@ -1,0 +1,71 @@
+.image{
+    padding: 30px;
+    min-height: 100%;
+    &__title{
+        font-size: 30px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 30px;
+    }
+    &__slider{
+        padding: 30px 0 70px 0;
+        // Ограничиваем ширину слайдера при эффекте CUBE
+        // width: 500px;
+        // Добавляем высоту если нужно сделать мультирядность или вертикальный слайдер
+        // height: 700px;
+        &-image{
+            max-width: 60%;
+            text-align: center;
+            margin-left: 30px;
+        }
+        // &-slide{
+            // Эти свойства писать при мультирядности
+            // 30 пикселей - отнимаем, это значение настройки spacebetween в js файле
+            // height: calc((100% - 30px) / 2);
+            // overflow: hidden;
+            // width: auto;
+        // }
+        /*Стрелки выполнены в виде иконочного шрифта. Мы обращаемся к ним, и можем менять
+        размер, цвет, вообщем, по другому их стилизовать. По умолчанию - они синего цвета*/
+        .swiper-button-prev:after,
+        .swiper-button-next::after{
+            color: black;
+            font-size: 60px;
+        }
+        /*Буллеты также можно стилизовать. Чтобы посмотреть класс дива внутри пагинации - 
+        открыть инструменты разработчика, и посмотреть*/
+        .swiper-pagination{
+            bottom: 0;
+            /*Стилизация буллетов*/
+           &-bullet{
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                font-size: 14px;
+                background-color: aqua;
+                /*Ховер и актив стейт также можно делать буллетам*/
+                &:hover{
+                    background-color: bisque;
+                }
+                &:active{
+                    background-color: coral;
+                }
+            }
+            /*Стилизация типа Фракция*/
+            &-fraction{ 
+                font-size: 20px;
+                color: brown;
+            }
+            /*Стилизация прогрессбар*/
+            &-progressbar-fill{
+                background-color: green;
+            }
+        }
+        .swiper-scrollbar{
+            &-drag{
+                cursor: pointer;
+                background-color: green;
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+h1{
+  margin-bottom: 10px;
+}
+
+.switch__toggle{
+
+  &-btn{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  &-inner{
+    font-size: 20px;
+    position: relative;
+    padding: 8px 8px 8px 74px;
+  }
+
+  &-inner:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 18px;
+    transition: background-color .3s;
+
+    /*when we have more content, then, we gonna align :before/:after, these elements must be centered to our text
+
+    What we must use:
+    top: 50%
+    transform: translateY(-50%)
+
+    Sometimes, may be used display: inline-block/block, depends on the situation and layout*/
+  }
+
+  &-inner:after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: green;
+    left: 3px;
+    top: 3px;
+    transition: background-color .3s, left .3s;
+  }
+
+  &-btn:checked + &-inner:before{
+    background-color: antiquewhite;
+  }
+
+  &-btn:checked + &-inner:after{
+    background-color: aquamarine;
+    left: 37px;
+  }
+
+  &-btn:focus + &-inner:before{
+    outline: 3px solid  sandybrown;
+  }
+
+  /*This feature can be made also with input type RADIO. In such a case, do not forget to add name to radio buttons
+  and it may be done only if we have several inputs and labels. Otherwise, if one, then it can be switched only once!!!*/
+}

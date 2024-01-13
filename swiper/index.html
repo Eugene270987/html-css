@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header"></header>
+    <main class="main">
+      <section class="image swiper">
+        <h1 class="image__title">Slider Swiper</h1>
+        <!-- Slider main container -->
+        <!-- Для него можно прописать dir="rtl" - слайдеры станут справа на лево, для стран,
+        где письменность справа на лево -->
+        <div class="image__slider swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="image__slider-wrapper swiper-wrapper">
+            <!-- Slides -->
+
+            <div data-hash="slide-1" class="image__slider-slide swiper-slide">
+              <!-- Для Зума - добавляем класс обертке картинки - class="swiper-zoom-container" -->
+              <div class="image__slider-image swiper-zoom-container">
+                <!-- Автоматическая подгрузка картинок -->
+                <!-- <img class="swiper-lazy" data-src="img/chairs.png" src="img/1x1.png" alt="picture" /> -->
+                <!-- <div class="swiper-lazy-preloader"></div> -->
+                <img src="img/chairs.png" alt="picture" />
+              </div>
+            </div>
+
+            <div data-hash="slide-2" class="image__slider-slide swiper-slide">
+              <div class="image__slider-image">
+                <img src="img/dialogue.png" alt="picture" />
+              </div>
+            </div>
+
+            <div data-hash="slide-3" class="image__slider-slide swiper-slide">
+              <div class="image__slider-image">
+                <img src="img/girl.png" alt="picture" />
+              </div>
+            </div>
+
+            <div data-hash="slide-4" class="image__slider-slide swiper-slide">
+              <div class="image__slider-image">
+                <img src="img/honey.png" alt="picture" />
+              </div>
+            </div>
+
+            <div data-hash="slide-5" class="image__slider-slide swiper-slide">
+              <div class="image__slider-image">
+                <img src="img/house.png" alt="picture" />
+              </div>
+            </div>
+
+            <div data-hash="slide-6" class="image__slider-slide swiper-slide">
+              <div class="image__slider-image">
+                <img src="img/work.png" alt="picture" />
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
